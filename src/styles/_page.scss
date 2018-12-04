@@ -1,0 +1,132 @@
+//---------------------------------------
+// Global styles
+//---------------------------------------
+
+body {
+  background: $ui-01;
+  line-height: 1.5;
+  font-family: $font-family;
+}
+
+.side-nav + div, //Issue #51 weird bug where sometimes on reload of the page the classnames on container div disapear 
+  .container {
+  width: 100%;
+  margin-left: 0;
+  transition: $transition--base ease;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+
+  @include breakpoint('840px') {
+    margin-left: rem(256px);
+    width: calc(100% - 256px);
+  }
+}
+
+.side-nav + .container--expanded, //Issue #51
+  .container--expanded {
+  width: 100%;
+  margin-left: 0;
+}
+
+//---------------------------------------
+// Page styles
+//---------------------------------------
+
+button,
+.side-nav .bx--btn {
+  font-family: $font-family;
+}
+
+.page-content {
+  padding: 4rem 12.5%;
+  width: 100%;
+  margin-bottom: 7rem;
+
+  @media all and (max-width: 620px) {
+    padding: $spacing-3xl 3%;
+    margin-bottom: 14rem;
+  }
+
+  // The max width of the actual content
+  & > div {
+    max-width: 55rem;
+  }
+
+  // All paragraphs on Markdown pages
+  // And divs when markdown doesn't wrap text in paragraphs (when you have to use html for links to open in a new window)
+  p {
+    max-width: 38rem;
+    line-height: 1.5;
+    padding: 0 0 $spacing-md;
+  }
+
+  // All em on Markdown pages after images and image grid
+  .gatsby-resp-image-link + em,
+  .image-grid + p > em,
+  .image-component + p > em {
+    font-size: .875em;
+    color: $text-02;
+  }
+
+  // Images on component pages
+  .image-component {
+    background: $ui-02;
+    max-width: 38rem;
+    display: flex;
+    justify-content: center;
+    padding: $spacing-md 0;
+
+    .gatsby-resp-image-link,
+    > img {
+      width: 50%;
+      height: 50%;
+    }
+  }
+
+  // No padding when a paragraph is followed by certain elements
+  p + .bx--snippet,
+  p + ul {
+    margin-top: 0;
+  }
+
+  // All links on Markdown pages but not inside component examples
+  & > div > * > a,
+  .page-table td a,
+  .page-ul a {
+    color: $brand-01;
+    font-weight: 600;
+  }
+
+  // No padding between h2 and h3
+  .page-h2 + .page-h3 {
+    padding-top: 0;
+  }
+
+  // Inline code
+  p > code,
+  li > code,
+  td > code {
+    @include reset;
+    font-family: $font-family-mono;
+    position: relative;
+    display: inline;
+    padding: rem(1px) $spacing-xs;
+    background: transparent;
+    font-size: inherit;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: $field-01;
+    font-size: 85%;
+  }
+
+  // HR dividers
+  hr.divider {
+    display: block;
+    margin: 3rem 0;
+    max-width: 38rem;
+    height: 1px;
+    background: $ui-03;
+    border: 0px transparent;
+  }
+}

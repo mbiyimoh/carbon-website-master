@@ -1,0 +1,66 @@
+//---------------------------------------
+// Carbon Components
+//---------------------------------------
+@import 'carbon-components/scss/globals/scss/styles.scss';
+
+//---------------------------------------
+// Page styles
+//---------------------------------------
+$bright-blue: #3c6df0!default;
+$dark-blue: #3057d5!default;
+$brand-01: $dark-blue;
+$font-family: 'IBM Plex Sans', 'ibm-plex-sans', 'Helvetica Neue', Arial,
+  sans-serif;
+
+@import 'mixins';
+@import 'page';
+@import 'home';
+
+//---------------------------------------
+// Components
+//---------------------------------------
+@import '../components/404/404.scss';
+@import '../components/markdown/markdown.scss';
+@import '../components/markdown/image-grid.scss';
+@import '../components/PageHeader/page-header.scss';
+@import '../components/PageTabs/page-tabs.scss';
+@import '../components/CodeSnippet/code-snippet.scss';
+@import '../components/ClickableTile/clickable-tile.scss';
+@import '../components/PageTable/page-table.scss';
+@import '../components/SideNav/side-nav.scss';
+@import '../components/SideNavToggleBtn/side-nav-toggle-btn.scss';
+@import '../components/Footer/footer.scss';
+@import '../components/Example/example.scss';
+@import '../components/ColorBlock/color-block.scss';
+@import '../components/ColorCard/color-card.scss';
+@import '../components/IconCard/icon-card.scss';
+@import '../components/IconEmptyState/icon-empty-state.scss';
+@import '../components/TypeScaleTable/type-scale-table.scss';
+@import '../components/TypeStylesTable/type-styles-table.scss';
+@import '../components/TypeWeightTable/type-weight-table.scss';
+@import '../components/GlossaryNav/glossary-nav.scss';
+@import '../components/GlossaryList/glossary-list.scss';
+@import '../components/MotionExample/motion-example.scss';
+@import '../components/LayerTypes/layer-types.scss';
+@import '../components/LayerUsage/layer-usage.scss';
+@import '../components/ComponentCode/component-code.scss';
+@import '../components/ComponentExample/component-example.scss';
+@import '../components/ComponentExample/component-overrides.scss';
+@import '../components/CodeExample/code-example.scss';
+@import '../components/CodePage/code-page.scss';
+@import '../components/ComponentDocs/component-docs.scss';
+@import '../components/ComponentStatus/component-status.scss';
+@import '../components/ComponentReact/component-react.scss';
+@import '../components/ComponentOverview/component-overview.scss';
+@import '../components/GlobalSearch/global-search.scss';
+
+//---------------------------------------
+// Syntax
+//---------------------------------------
+@import 'prism';
+@import 'syntax';
+
+//---------------------------------------
+// Halloween 🎃
+//---------------------------------------
+//@import 'halloween';
